@@ -1,0 +1,51 @@
+# Python 编译产物和临时文件
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+
+# virtualenv / venv / env
+env/
+venv/
+.venv/
+
+# pipenv
+.venv
+Pipfile.lock
+
+# poetry
+.venv
+poetry.lock
+
+# PyCharm
+.idea/
+*.iml
+
+# Visual Studio Code
+.vscode/
+
+# 日志和临时文件
+*.log
+logs/
+temp/
+Log/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+det_images/*
+
+*.cmd
+*.a
+*.order
+*.o
+*.ko
+*.mk
+*.mod
+*.mod.c
+*.symvers

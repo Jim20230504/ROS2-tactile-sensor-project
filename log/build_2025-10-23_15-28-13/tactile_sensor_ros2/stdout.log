@@ -1,0 +1,58 @@
+running egg_info
+creating ../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info
+writing ../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info/PKG-INFO
+writing dependency_links to ../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info/dependency_links.txt
+writing entry points to ../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info/entry_points.txt
+writing requirements to ../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info/requires.txt
+writing top-level names to ../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info/top_level.txt
+writing manifest file '../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info/SOURCES.txt'
+reading manifest file '../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info/SOURCES.txt'
+writing manifest file '../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/jim/tactile_ws/build/tactile_sensor_ros2/build
+creating /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib
+creating /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2
+copying tactile_sensor_ros2/cap_read_node.py -> /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2
+copying tactile_sensor_ros2/sensorPara.py -> /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2
+copying tactile_sensor_ros2/class_finger.py -> /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2
+copying tactile_sensor_ros2/__init__.py -> /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2
+copying tactile_sensor_ros2/class_sensorcmd.py -> /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2
+copying tactile_sensor_ros2/data_subscriber_node.py -> /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2
+copying tactile_sensor_ros2/finger_log_setting.py -> /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2
+copying tactile_sensor_ros2/class_ch341.py -> /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2
+running install
+running install_lib
+creating /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2
+copying /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2/cap_read_node.py -> /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2
+copying /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2/sensorPara.py -> /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2
+copying /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2/class_finger.py -> /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2
+copying /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2/__init__.py -> /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2
+copying /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2/class_sensorcmd.py -> /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2
+copying /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2/data_subscriber_node.py -> /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2
+copying /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2/finger_log_setting.py -> /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2
+copying /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2/class_ch341.py -> /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2
+byte-compiling /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2/cap_read_node.py to cap_read_node.cpython-310.pyc
+byte-compiling /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2/sensorPara.py to sensorPara.cpython-310.pyc
+byte-compiling /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2/class_finger.py to class_finger.cpython-310.pyc
+byte-compiling /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2/class_sensorcmd.py to class_sensorcmd.cpython-310.pyc
+byte-compiling /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2/data_subscriber_node.py to data_subscriber_node.cpython-310.pyc
+byte-compiling /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2/finger_log_setting.py to finger_log_setting.cpython-310.pyc
+byte-compiling /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2/class_ch341.py to class_ch341.cpython-310.pyc
+running install_data
+creating /home/jim/tactile_ws/install/tactile_sensor_ros2/share/ament_index
+creating /home/jim/tactile_ws/install/tactile_sensor_ros2/share/ament_index/resource_index
+creating /home/jim/tactile_ws/install/tactile_sensor_ros2/share/ament_index/resource_index/packages
+copying resource/tactile_sensor_ros2 -> /home/jim/tactile_ws/install/tactile_sensor_ros2/share/ament_index/resource_index/packages
+copying package.xml -> /home/jim/tactile_ws/install/tactile_sensor_ros2/share/tactile_sensor_ros2
+creating /home/jim/tactile_ws/install/tactile_sensor_ros2/share/tactile_sensor_ros2/launch
+copying launch/tactile_sensor_launch.py -> /home/jim/tactile_ws/install/tactile_sensor_ros2/share/tactile_sensor_ros2/launch
+creating /home/jim/tactile_ws/install/tactile_sensor_ros2/share/tactile_sensor_ros2/config
+copying config/params.yaml -> /home/jim/tactile_ws/install/tactile_sensor_ros2/share/tactile_sensor_ros2/config
+running install_egg_info
+Copying ../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info to /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2-1.0.0-py3.10.egg-info
+running install_scripts
+Installing cap_read_node script to /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/tactile_sensor_ros2
+Installing data_subscriber script to /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/tactile_sensor_ros2
+writing list of installed files to '/home/jim/tactile_ws/build/tactile_sensor_ros2/install.log'

@@ -1,0 +1,31 @@
+[0.400s] Invoking command in '/home/jim/tactile_ws/src/tactile_sensor_ros2': PYTHONPATH=/home/jim/tactile_ws/build/tactile_sensor_ros2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tactile_sensor_ros2 build --build-base /home/jim/tactile_ws/build/tactile_sensor_ros2/build install --record /home/jim/tactile_ws/build/tactile_sensor_ros2/install.log --single-version-externally-managed install_data
+[0.557s] running egg_info
+[0.558s] writing ../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info/PKG-INFO
+[0.558s] writing dependency_links to ../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info/dependency_links.txt
+[0.558s] writing entry points to ../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info/entry_points.txt
+[0.558s] writing requirements to ../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info/requires.txt
+[0.558s] writing top-level names to ../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info/top_level.txt
+[0.559s] reading manifest file '../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info/SOURCES.txt'
+[0.560s] writing manifest file '../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info/SOURCES.txt'
+[0.560s] running build
+[0.560s] running build_py
+[0.560s] copying tactile_sensor_ros2/cap_read_node.py -> /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2
+[0.561s] copying tactile_sensor_ros2/data_subscriber_node.py -> /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2
+[0.561s] copying tactile_sensor_ros2/class_ch341.py -> /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2
+[0.561s] running install
+[0.561s] running install_lib
+[0.562s] copying /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2/cap_read_node.py -> /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2
+[0.562s] copying /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2/data_subscriber_node.py -> /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2
+[0.562s] copying /home/jim/tactile_ws/build/tactile_sensor_ros2/build/lib/tactile_sensor_ros2/class_ch341.py -> /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2
+[0.562s] byte-compiling /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2/cap_read_node.py to cap_read_node.cpython-310.pyc
+[0.564s] byte-compiling /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2/data_subscriber_node.py to data_subscriber_node.cpython-310.pyc
+[0.564s] byte-compiling /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2/class_ch341.py to class_ch341.cpython-310.pyc
+[0.566s] running install_data
+[0.566s] running install_egg_info
+[0.568s] removing '/home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2-1.0.0-py3.10.egg-info' (and everything under it)
+[0.568s] Copying ../../build/tactile_sensor_ros2/tactile_sensor_ros2.egg-info to /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2-1.0.0-py3.10.egg-info
+[0.568s] running install_scripts
+[0.582s] Installing cap_read_node script to /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/tactile_sensor_ros2
+[0.582s] Installing data_subscriber script to /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/tactile_sensor_ros2
+[0.582s] writing list of installed files to '/home/jim/tactile_ws/build/tactile_sensor_ros2/install.log'
+[0.596s] Invoked command in '/home/jim/tactile_ws/src/tactile_sensor_ros2' returned '0': PYTHONPATH=/home/jim/tactile_ws/build/tactile_sensor_ros2/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/tactile_sensor_ros2 build --build-base /home/jim/tactile_ws/build/tactile_sensor_ros2/build install --record /home/jim/tactile_ws/build/tactile_sensor_ros2/install.log --single-version-externally-managed install_data
