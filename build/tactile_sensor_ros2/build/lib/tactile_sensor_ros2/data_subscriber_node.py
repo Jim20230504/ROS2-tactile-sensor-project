@@ -42,7 +42,7 @@ class DataSubscriber(Node):
             try:
                 data = json.loads(msg.data)
                 self.get_logger().info(
-                    f"Finger {finger_index}\n "
+                    f"Finger {finger_index}\n"
                     f"NF: {data['normal_forces']}\n"
                     f"TF: {data['tangential_forces']}\n"
                     f"Channels: {len(data['channel_cap_data'])}\n "

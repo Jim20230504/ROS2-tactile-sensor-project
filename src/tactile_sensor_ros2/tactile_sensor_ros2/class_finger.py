@@ -23,7 +23,7 @@ class capData:
         self.nf = list()                # 法向力数组
         self.sProxCapData = list()      # 接近(自电容)数组
         self.mProxCapData = list()      # 接近（互电容）数组
-        self.cnt = 0                                    # 计数，测试用
+        self.cnt = 0                    # 计数，测试用
 
     def init(self, addr, yddsNum, sProxNum, mProxNum, capChannelNum):
         self.sensorIndex = addr                             # 电容序号，与iic addr相同
@@ -46,17 +46,15 @@ class capData:
 
 class ClassFinger:
     def __init__(self, pca_idx, ch341, node=None):
-        self.snsCmd = ClassSensorCmd(ch341, node)  # 传递节点引用
+        self.snsCmd = ClassSensorCmd(ch341, node) 
         self.pcaIdx = pca_idx
         self.readData = capData()
-        
-        
         self.node = node
         if node:
             self.logger = node.get_logger()
-        else:
-            from finger_log_setting import logging
-            self.logger = logging.getLogger(__name__)
+        # else:
+        #     from finger_log_setting import logging
+        #     self.logger = logging.getLogger(__name__)
             
         self.disconnected()
 
@@ -71,7 +69,7 @@ class ClassFinger:
             self.logger.error(f"setSensorCapOffset error, addr = {addrRead}")
 
         projectRead = self.snsCmd.getSensorProjectIdex(addrRead)
-        self.logger.info(f"Detected project: {projectRead}")
+        self.logger.info(f"project={projectRead}")
         
         
         findProjectFlg = False

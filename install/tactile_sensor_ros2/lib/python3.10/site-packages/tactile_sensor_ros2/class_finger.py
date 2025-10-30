@@ -9,12 +9,12 @@ import time
 from ctypes import sizeof
 import copy
 
-# ROS 2适配：移除原日志导入
+
 # from finger_log_setting import logging
 # logger = logging.getLogger(__name__)
 
 class capData:
-    # ... (保持不变)
+    
     def __init__(self):
         self.sensorIndex = 0            # 电容序号，与iic addr相同
         self.channelCapData = list()    # 原始通道数值
@@ -23,7 +23,7 @@ class capData:
         self.nf = list()                # 法向力数组
         self.sProxCapData = list()      # 接近(自电容)数组
         self.mProxCapData = list()      # 接近（互电容）数组
-        self.cnt = 0                                    # 计数，测试用
+        self.cnt = 0                    # 计数，测试用
 
     def init(self, addr, yddsNum, sProxNum, mProxNum, capChannelNum):
         self.sensorIndex = addr                             # 电容序号，与iic addr相同
@@ -46,22 +46,20 @@ class capData:
 
 class ClassFinger:
     def __init__(self, pca_idx, ch341, node=None):
-        self.snsCmd = ClassSensorCmd(ch341, node)  # 传递节点引用
+        self.snsCmd = ClassSensorCmd(ch341, node) 
         self.pcaIdx = pca_idx
         self.readData = capData()
-        
-        # ROS 2适配：使用节点日志
         self.node = node
         if node:
             self.logger = node.get_logger()
-        else:
-            from finger_log_setting import logging
-            self.logger = logging.getLogger(__name__)
+        # else:
+        #     from finger_log_setting import logging
+        #     self.logger = logging.getLogger(__name__)
             
         self.disconnected()
 
     def checkSensor(self):
-        # ... (逻辑不变，修改日志调用)
+        
         addrRead = self.snsCmd.getAddr(0)
         
         if self.snsCmd.setSensorSendType(addrRead, 0) is not True:
@@ -71,9 +69,9 @@ class ClassFinger:
             self.logger.error(f"setSensorCapOffset error, addr = {addrRead}")
 
         projectRead = self.snsCmd.getSensorProjectIdex(addrRead)
-        self.logger.info(f"Detected project: {projectRead}")
+        self.logger.info(f"project={projectRead}")
         
-        # ... (其余逻辑不变)
+        
         findProjectFlg = False
         if projectRead > 0:
             for pro in finger_params:

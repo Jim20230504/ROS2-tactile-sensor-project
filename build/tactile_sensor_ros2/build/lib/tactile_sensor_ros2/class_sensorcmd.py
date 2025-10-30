@@ -2,13 +2,13 @@
 import time
 from ctypes import c_uint8
 
-# ROS 2适配：移除原日志导入
+
 # from finger_log_setting import logging
 # logger = logging.getLogger(__name__)
 
 class ClassSensorCmd:
     def __init__(self, ch341, node=None):
-        # ... (命令定义不变)
+        
         # 命令定义
         self.CMD_GET_CHANNEL_NUM = 0x01                 # 读取通道数量
         self.CMD_GET_SENSOR_CAP_DATA = 0x60             # 读取传感器数据
@@ -41,23 +41,21 @@ class ClassSensorCmd:
         self.sendCnt = list()
         self.sendCnt.append(0)
         self.sendCnt.append(0)
-
-        self._ch341 = ch341
         
-        # ROS 2适配：使用节点日志
+        
         self.node = node
         if node:
             self.logger = node.get_logger()
-        else:
-            from finger_log_setting import logging
-            self.logger = logging.getLogger(__name__)
+        # else:
+        #     from finger_log_setting import logging
+        #     self.logger = logging.getLogger(__name__)
             
         self.sendTimePre = [time.time(), time.time()]
         self.sendTimeNow = [time.time(), time.time()]
         self.sendCnt = [0, 0]
 
-    # ... (所有方法逻辑不变，修改日志调用)
-     # 计算校验和
+    
+    # 计算校验和
     # pack 数据
     def calcSum(self, pack):
         if len(pack) <= 5:
@@ -186,7 +184,7 @@ class ClassSensorCmd:
         return 0
 
     # 设置发送类型
-    # addr：传感器地址
+    
     def setSensorSendType(self, addr, sendType):
         _pack = list()
         _pack.append(0xAA)
@@ -211,7 +209,7 @@ class ClassSensorCmd:
         return False
 
     # 设置采集偏置
-    # addr：传感器地址
+    
     def setSensorCapOffset(self, addr, offset):
         _pack = list()
         _pack.append(0xAA)
@@ -237,7 +235,7 @@ class ClassSensorCmd:
         return False
 
     # 读取电容数据
-    # addr：传感器地址
+    
     def getSensorCapData(self, addr, buf):
         tarLen = len(buf)
         err = self._ch341.read(addr, buf)
@@ -248,7 +246,7 @@ class ClassSensorCmd:
         if tarLen != len(buf):
             buf.clear()
             buf.extend(range(tarLen))
-        # try:
+        
         if (len(buf) == tarLen and buf[0] & 0xFF) == 0x55 \
                 and (buf[1] & 0xFF) == 0xAA \
                 and checkSum is True:
@@ -259,7 +257,7 @@ class ClassSensorCmd:
         return False
 
     # 设置采集同步
-    # addr：传感器地址
+    
     def setSensorSync(self, addr):
         _pack = list()
         _pack.append(0xAA)

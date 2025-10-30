@@ -12,8 +12,7 @@ class DataSubscriber(Node):
         
         # 订阅所有手指的数据
         # self.subscriptions = []
-        # 若需要管理订阅者，可自定义其他变量名，如：
-        self.my_subscriptions = []  # 用自定义名称
+        self.my_subscriptions = []  
         # 假设最大5个手指
         for i in range(5):
             # 订阅JSON格式的完整数据

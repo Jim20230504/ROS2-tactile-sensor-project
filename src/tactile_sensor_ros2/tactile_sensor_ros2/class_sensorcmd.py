@@ -41,16 +41,14 @@ class ClassSensorCmd:
         self.sendCnt = list()
         self.sendCnt.append(0)
         self.sendCnt.append(0)
-
-        self._ch341 = ch341
         
         
         self.node = node
         if node:
             self.logger = node.get_logger()
-        else:
-            from finger_log_setting import logging
-            self.logger = logging.getLogger(__name__)
+        # else:
+        #     from finger_log_setting import logging
+        #     self.logger = logging.getLogger(__name__)
             
         self.sendTimePre = [time.time(), time.time()]
         self.sendTimeNow = [time.time(), time.time()]
@@ -248,7 +246,7 @@ class ClassSensorCmd:
         if tarLen != len(buf):
             buf.clear()
             buf.extend(range(tarLen))
-        # try:
+        
         if (len(buf) == tarLen and buf[0] & 0xFF) == 0x55 \
                 and (buf[1] & 0xFF) == 0xAA \
                 and checkSum is True:

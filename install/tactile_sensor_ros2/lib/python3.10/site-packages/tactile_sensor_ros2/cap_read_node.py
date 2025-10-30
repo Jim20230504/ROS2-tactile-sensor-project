@@ -9,18 +9,17 @@ import json
 import threading
 import time
 from typing import List
-from std_msgs.msg import String  # 新增：导入String消息类型
+from std_msgs.msg import String  
 
-# 导入原项目模块（适配ROS 2日志）
+
 from .class_ch341 import ClassCh341
 from .class_finger import ClassFinger
 from .sensorPara import FingerParamTS
-from .finger_log_setting import finger_setup_logging
+# from .finger_log_setting import finger_setup_logging
 import socket
 from dataclasses import dataclass, field
 
-# ROS 2适配：移除原队列，使用ROS 2话题
-# 移除: fingerDataQueue, fingerThreadExitQueue
+# ROS 2适配：移除队列，使用ROS 2话题
 
 @dataclass
 class fingerDataPack:
@@ -71,7 +70,7 @@ class ClassCapRead:
         # self.connectDebug()
 
         # 原日志系统初始化
-        finger_setup_logging()
+        # finger_setup_logging()
 
     def __del__(self):
         self.deinit()

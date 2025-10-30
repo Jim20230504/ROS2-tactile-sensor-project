@@ -1,7 +1,7 @@
 from typing import List, Optional
 from ctypes import Structure, c_float, c_uint32, c_uint16
-from .finger_log_setting import logging
-logger = logging.getLogger(__name__)
+# from .finger_log_setting import logging
+# logger = logging.getLogger(__name__)
 
 class DynamicYddsComTs(Structure):
     _pack_ = 1  # 按 1 字节对齐
@@ -23,7 +23,7 @@ class DynamicYddsU16Ts(Structure):
         ("tfDir", c_uint16),
     ]
 
-# todo 其他三维力类型待补充
+
 
 
 class FingerHeatMap:

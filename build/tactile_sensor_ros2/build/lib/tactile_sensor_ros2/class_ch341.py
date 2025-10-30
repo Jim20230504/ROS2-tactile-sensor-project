@@ -25,7 +25,8 @@ class ClassCh341:
     _mCH341A_CMD_I2C_STM_END = 0x00
 
     _mStateBitINT = 0x00000400
-
+    
+    # I2C速度常量定义
     IIC_SPEED_20 = 0
     IIC_SPEED_100 = 1
     IIC_SPEED_400 = 2
@@ -36,13 +37,13 @@ class ClassCh341:
         self.fd = -1
         self.ic = None
         
-        # ROS 2适配：使用节点日志
+        
         self.node = node
         if node:
             self.logger = node.get_logger()
-        else:
-            from finger_log_setting import logging
-            self.logger = logging.getLogger(__name__)
+        # else:
+        #     from finger_log_setting import logging
+        #     self.logger = logging.getLogger(__name__)
 
     def init(self):
         if os.name == 'nt':  # Windows 环境
@@ -53,8 +54,8 @@ class ClassCh341:
             if hasattr(sys, '_MEIPASS'):
                 # 如果运行在 PyInstaller 打包环境中
                 # _MEIPASS 指向打包目录的根 (onedir) 或临时解压目录 (onefile)
-                # 假设 libch347.so 在打包目录的 _internal 文件夹下
-                bundle_root = sys.MEIPASS
+               
+                bundle_root = sys._MEIPASS
                 libPath = os.path.join(bundle_root, 'libch347.so')
                 self.logger.info(f"运行在打包环境中。尝试从 _MEIPASS 加载库: {libPath}")
             else:
@@ -65,7 +66,7 @@ class ClassCh341:
                 libPath = os.path.join(script_dir, 'lib', 'ch341', 'CH341PAR_LINUX', 'lib', 'x64', 'dynamic', 'libch347.so') 
 
                 self.logger.info(f"运行在开发环境中。尝试从脚本目录相对路径加载库: {libPath}")
-            # --- 路径构建结束 ---
+            
 
         dllExist = os.path.exists(libPath)
         if not dllExist:
@@ -74,7 +75,7 @@ class ClassCh341:
         else:
             try:
                 if os.name == 'nt':  # Windows 环境
-                    self.ic = windll.LoadLibrary(libPath)  # ch341接口
+                    self.ic = windll.LoadLibrary(libPath) 
 
                     self.ch341GetInput = self.ic.CH341GetInput
                     self.ch341CloseDevice = self.ic.CH341CloseDevice
@@ -84,7 +85,7 @@ class ClassCh341:
                     self.ch341SetStream = self.ic.CH341SetStream
 
                 elif os.name == 'posix':
-                    self.ic = cdll.LoadLibrary(libPath)  # ch341接口
+                    self.ic = cdll.LoadLibrary(libPath)  
 
                     self.ch341GetInput = self.ic.CH34xGetInput
                     self.ch341CloseDevice = self.ic.CH34xCloseDevice
@@ -126,29 +127,18 @@ class ClassCh341:
         except Exception as e:
             self.logger.error(f"Error opening CH341 device: {e}")
             return False
-
+        
     def disconnect(self):
-        if hasattr(self, 'ch341CloseDevice') and self.fd != -1:
-            try:
-                self.ch341CloseDevice(self.fd)
-                self.logger.info("CH341 device closed")
-            except Exception as e:
-                self.logger.error(f"Error closing CH341 device: {e}")
-            self.fd = -1
-
+        """关闭CH341设备连接"""
+        self.ch341CloseDevice(self.fd) 
+    
     def connectCheck(self):
-        if not hasattr(self, 'ch341GetInput'):
-            return 0
-        try:
-            return self.ch341GetInput(self.fd, ctypes.byref(self.deviceID))
-        except Exception as e:
-            self.logger.error(f"Error in connectCheck: {e}")
-            return 0
+        """检查设备是否连接正常"""
+        # 调用获取输入函数，通过设备ID判断连接状态
+        return self.ch341GetInput(self.fd, ctypes.byref(self.deviceID))
+
 
     def write(self, addr, data):
-        if not hasattr(self, 'ch341WriteData'):
-            self.logger.error("CH341 write method not available")
-            return 0
             
         sLen = len(data)
         tmpData = data.copy()
@@ -174,11 +164,14 @@ class ClassCh341:
                 sendBuf[j] = pack[j]
             sendLen = c_byte(len(pack))
             
-            try:
-                if not self.ch341WriteData(self.fd, sendBuf, ctypes.byref(sendLen)):
-                    return 0
-            except Exception as e:
-                self.logger.error(f"Write error: {e}")
+            # 发送长度（1字节，存储发送缓冲区的长度）
+            sendLen = (c_byte * 1)()
+            sendLen[0] = len(pack)
+
+            # 调用写数据函数，若失败返回0
+            if not self.ch341WriteData(self.fd, sendBuf, sendLen):
+                return 0
+            if sendLen == 0:  # 若实际发送长度为0，返回失败
                 return 0
                 
             pack.clear()
@@ -191,24 +184,22 @@ class ClassCh341:
         pack.append(self._mCH341A_CMD_I2C_STM_STO)
         pack.append(self._mCH341A_CMD_I2C_STM_END)
         
+         # 构建最后一包的发送缓冲区
         sendBuf = (c_byte * len(pack))()
-        for j in range(len(pack)):
+        for j in range(0, len(pack)):
             sendBuf[j] = pack[j]
-        sendLen = c_byte(len(pack))
-        
-        try:
-            if not self.ch341WriteData(self.fd, sendBuf, ctypes.byref(sendLen)):
-                return 0
-        except Exception as e:
-            self.logger.error(f"Write error: {e}")
+        sendLen = (c_byte * 1)()
+        sendLen[0] = len(pack)
+
+        # 发送最后一包数据
+        if not self.ch341WriteData(self.fd, sendBuf, sendLen):
             return 0
-            
-        return tmpLen
+        if sendLen == 0:
+            return 0
+
+        return tmpLen  # 返回原始数据总长度（表示发送完成）
 
     def read(self, addr, data):
-        if not hasattr(self, 'ch341WriteRead'):
-            self.logger.error("CH341 read method not available")
-            return 0
             
         if not data or len(data) == 0:
             return 0
@@ -238,25 +229,25 @@ class ClassCh341:
             for j in range(len(pack)):
                 sendBuf[j] = pack[j]
                 
-            recLen = c_byte(0)
+            recLen = (c_byte * 1)()  # 存储实际接收的长度
             recBuf = (c_byte * self._mCH341A_CMD_I2C_STM_MAX)()
             
-            try:
-                if not self.ch341WriteRead(self.fd,
-                                         len(pack),
-                                         sendBuf,
-                                         self._mCH341A_CMD_I2C_STM_MAX,
-                                         1,
-                                         ctypes.byref(recLen),
-                                         recBuf):
-                    return 0
-            except Exception as e:
-                self.logger.error(f"Read error: {e}")
+            # 调用读写函数（发送命令并接收数据）
+            if not self.ch341WriteRead(self.fd,
+                                       len(pack),
+                                       sendBuf,
+                                       self._mCH341A_CMD_I2C_STM_MAX,
+                                       1,
+                                       recLen,
+                                       recBuf):
+                return 0  # 操作失败返回0
+            if recLen == 0:  # 未接收到数据返回0
                 return 0
                 
-            for j in range(recLen.value):
+            for j in range(0, recLen[0]):
                 readBuf.append(recBuf[j])
             readLen += 30
+
             pack.clear()
             pack.append(self._mCH341A_CMD_I2C_STREAM)
 
@@ -270,23 +261,23 @@ class ClassCh341:
         for j in range(len(pack)):
             sendBuf[j] = pack[j]
             
-        recLen = c_byte(0)
+        recLen = (c_byte * 1)()
         recBuf = (c_byte * self._mCH341A_CMD_I2C_STM_MAX)()
         
-        try:
-            if not self.ch341WriteRead(self.fd,
-                                     len(pack),
-                                     sendBuf,
-                                     self._mCH341A_CMD_I2C_STM_MAX,
-                                     1,
-                                     ctypes.byref(recLen),
-                                     recBuf):
-                return 0
-        except Exception as e:
-            self.logger.error(f"Read error: {e}")
+         # 发送命令并接收最后一包数据
+        if not self.ch341WriteRead(self.fd,
+                                   len(pack),
+                                   sendBuf,
+                                   self._mCH341A_CMD_I2C_STM_MAX,
+                                   1,
+                                   recLen,
+                                   recBuf):
             return 0
-            
-        for j in range(recLen.value):
+        if recLen[0] == 0:  # 未接收到数据返回0
+            return 0
+
+        # 将最后一包数据添加到readBuf
+        for j in range(0, recLen[0]):
             readBuf.append(recBuf[j])
             
         data.clear()
@@ -294,33 +285,24 @@ class ClassCh341:
         return len(readBuf)
 
     def set_int(self, lvl):
-        if not hasattr(self, 'ch341GetInput') or not hasattr(self, 'ch341SetOutput'):
-            return
-            
-        status = c_long(0)
-        try:
-            self.ch341GetInput(0, ctypes.byref(status))
-            time.sleep(0.01)
-            if lvl:
-                self.ch341SetOutput(self.fd, 0x03, 0xFF00, status.value | self._mStateBitINT)
-            else:
-                self.ch341SetOutput(self.fd, 0x03, 0xFF00, status.value & (~self._mStateBitINT))
-        except Exception as e:
-            self.logger.error(f"Error setting INT: {e}")
+        status = (c_long * 1)()  # 用于存储当前输出状态
+        self.ch341GetInput(0, status)  # 获取当前输出状态
+        time.sleep(0.01)  # 短暂延时，确保状态读取完成
 
+        if lvl:  # 若要设置为高电平
+            # 设置输出：保留其他位，将INT引脚对应的位置1
+            self.ch341SetOutput(self.fd, 0x03, 0xFF00, status[0] | self._mStateBitINT)
+        else:  # 若要设置为低电平
+            # 设置输出：保留其他位，将INT引脚对应的位清0
+            self.ch341SetOutput(self.fd, 0x03, 0xFF00, status[0] & (~self._mStateBitINT))
+
+    # 读取INT引脚状态
     def get_int(self):
-        if not hasattr(self, 'ch341GetInput'):
-            return 0
-            
-        status = c_long(0)
-        try:
-            self.ch341GetInput(0, ctypes.byref(status))
-            return (status.value & self._mStateBitINT) >> 10
-        except Exception as e:
-            self.logger.error(f"Error getting INT: {e}")
-            return 0
+        status = (c_long * 1)()  
+        self.ch341GetInput(0, status)  
+        return (status[0] & self._mStateBitINT) >> 10
 
-      # 设置IIC速度
+    # 设置IIC速度
     # return：0错误，1成功
     def set_speed(self, speed):
         if speed != self.IIC_SPEED_20 \
@@ -328,6 +310,7 @@ class ClassCh341:
                 and speed != self.IIC_SPEED_400 \
                 and speed != self.IIC_SPEED_750:
             return False
+        
         if self.ch341SetStream(self.fd, speed | 0) is False:
             self.logger.error("speed err")
             return False
