@@ -9,12 +9,12 @@ import time
 from ctypes import sizeof
 import copy
 
-# ROS 2适配：移除原日志导入
+
 # from finger_log_setting import logging
 # logger = logging.getLogger(__name__)
 
 class capData:
-    # ... (保持不变)
+    
     def __init__(self):
         self.sensorIndex = 0            # 电容序号，与iic addr相同
         self.channelCapData = list()    # 原始通道数值
@@ -50,7 +50,7 @@ class ClassFinger:
         self.pcaIdx = pca_idx
         self.readData = capData()
         
-        # ROS 2适配：使用节点日志
+        
         self.node = node
         if node:
             self.logger = node.get_logger()
@@ -61,7 +61,7 @@ class ClassFinger:
         self.disconnected()
 
     def checkSensor(self):
-        # ... (逻辑不变，修改日志调用)
+        
         addrRead = self.snsCmd.getAddr(0)
         
         if self.snsCmd.setSensorSendType(addrRead, 0) is not True:
@@ -73,7 +73,7 @@ class ClassFinger:
         projectRead = self.snsCmd.getSensorProjectIdex(addrRead)
         self.logger.info(f"Detected project: {projectRead}")
         
-        # ... (其余逻辑不变)
+        
         findProjectFlg = False
         if projectRead > 0:
             for pro in finger_params:

@@ -25,7 +25,8 @@ class ClassCh341:
     _mCH341A_CMD_I2C_STM_END = 0x00
 
     _mStateBitINT = 0x00000400
-
+    
+    # I2C速度常量定义
     IIC_SPEED_20 = 0
     IIC_SPEED_100 = 1
     IIC_SPEED_400 = 2
@@ -36,7 +37,7 @@ class ClassCh341:
         self.fd = -1
         self.ic = None
         
-        # ROS 2适配：使用节点日志
+        
         self.node = node
         if node:
             self.logger = node.get_logger()
@@ -53,8 +54,8 @@ class ClassCh341:
             if hasattr(sys, '_MEIPASS'):
                 # 如果运行在 PyInstaller 打包环境中
                 # _MEIPASS 指向打包目录的根 (onedir) 或临时解压目录 (onefile)
-                # 假设 libch347.so 在打包目录的 _internal 文件夹下
-                bundle_root = sys.MEIPASS
+               
+                bundle_root = sys._MEIPASS
                 libPath = os.path.join(bundle_root, 'libch347.so')
                 self.logger.info(f"运行在打包环境中。尝试从 _MEIPASS 加载库: {libPath}")
             else:
@@ -65,7 +66,7 @@ class ClassCh341:
                 libPath = os.path.join(script_dir, 'lib', 'ch341', 'CH341PAR_LINUX', 'lib', 'x64', 'dynamic', 'libch347.so') 
 
                 self.logger.info(f"运行在开发环境中。尝试从脚本目录相对路径加载库: {libPath}")
-            # --- 路径构建结束 ---
+            
 
         dllExist = os.path.exists(libPath)
         if not dllExist:
@@ -320,7 +321,7 @@ class ClassCh341:
             self.logger.error(f"Error getting INT: {e}")
             return 0
 
-      # 设置IIC速度
+    # 设置IIC速度
     # return：0错误，1成功
     def set_speed(self, speed):
         if speed != self.IIC_SPEED_20 \

@@ -23,7 +23,7 @@ class DynamicYddsU16Ts(Structure):
         ("tfDir", c_uint16),
     ]
 
-# todo 其他三维力类型待补充
+
 
 
 class FingerHeatMap:
