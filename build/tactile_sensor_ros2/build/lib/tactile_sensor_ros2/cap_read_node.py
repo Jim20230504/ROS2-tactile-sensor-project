@@ -15,11 +15,11 @@ from std_msgs.msg import String
 from .class_ch341 import ClassCh341
 from .class_finger import ClassFinger
 from .sensorPara import FingerParamTS
-# from .finger_log_setting import finger_setup_logging
+#from .finger_log_setting import finger_setup_logging
 import socket
 from dataclasses import dataclass, field
 
-# ROS 2适配：移除队列，使用ROS 2话题
+# 移除队列，使用话题
 
 @dataclass
 class fingerDataPack:
@@ -37,7 +37,7 @@ class ClassCapRead:
         self.node = node
         self.logger = node.get_logger()
         
-        # ROS 2适配：从参数服务器读取配置
+        #从参数服务器读取配置
         self.max_finger_num = self.node.get_parameter('max_finger_num').value
         self.use_vofa_debug = self.node.get_parameter('use_vofa_debug').value
         self.get_cap_ms = self.node.get_parameter('get_cap_ms').value
@@ -47,15 +47,15 @@ class ClassCapRead:
         self.logger.info(f"Loaded parameters: max_fingers={self.max_finger_num}, "
                         f"i2c_speed={self.i2c_speed}, get_cap_ms={self.get_cap_ms}")
 
-        # 初始化CH341
+        #初始化CH341
         self.ch341 = ClassCh341(node)
         
-        # 传感器列表
+        #传感器列表
         self.fingers = []
         for i in range(self.max_finger_num):
             self.fingers.append(ClassFinger(2+i, self.ch341, node))
 
-        # 状态变量
+        #状态变量
         self.ch341CheckTimer = 0
         self.mcuInit = 0
         self.pcaAddr = 0x70
@@ -63,20 +63,20 @@ class ClassCapRead:
         self.syncTimer = 0
         self.exitFlg = False
         
-        # CH341连接状态
+        #CH341连接状态
         self.connectStatus = 0  # 0=未初始化, 1=库加载, 2=设备打开, 3=速度设置, 4=运行
         
-        # ROS 2适配：VOFA调试
-        # self.connectDebug()
+        #ROS 2适配：VOFA调试
+        #self.connectDebug()
 
-        # 原日志系统初始化
-        # finger_setup_logging()
+        #原日志系统初始化
+        #finger_setup_logging()
 
     def __del__(self):
         self.deinit()
 
     def deinit(self):
-        # self.disConnectDebug()
+        #self.disConnectDebug()
         if hasattr(self, 'ch341'):
             self.ch341.disconnect()
         self.exitFlg = True
@@ -88,14 +88,14 @@ class ClassCapRead:
         
     def ch341Connect(self):
         """CH341连接状态机"""
-        if self.connectStatus == 0:  # 未初始化
+        if self.connectStatus == 0:  #未初始化
             if self.ch341.init():
                 self.logger.info("CH341 library initialized")
                 self.connectStatus = 1
             else:
                 self.logger.error("CH341 library initialization failed")
                 
-        elif self.connectStatus == 1:  # 库加载成功
+        elif self.connectStatus == 1:  #库加载成功
             if self.ch341.open():
                 self.logger.info("CH341 device opened")
                 self.connectStatus = 2
@@ -113,7 +113,7 @@ class ClassCapRead:
             else:
                 self.logger.error("CH341 speed setting failed")
                 
-        elif self.connectStatus == 3:  # 速度设置成功
+        elif self.connectStatus == 3:  #速度设置成功
             self.connectStatus = 4  # 进入运行状态
             self.logger.info("CH341 fully initialized and ready")
 
@@ -122,7 +122,7 @@ class ClassCapRead:
         if self.exitFlg:
             return
 
-        # 检查CH341连接状态
+        #检查CH341连接状态
         if self.connectStatus < 4:
             self.ch341Connect()
             return
@@ -148,7 +148,7 @@ class ClassCapRead:
             except Exception as e:
                 self.logger.error(f"Error reading finger {fingerIndex}: {e}")
 
-        # 多传感器同步逻辑
+        #多传感器同步逻辑
         if connectedSensorCnt > 1 and (time.time() - self.syncTimer) > (self.cap_sync_ms / 1000.0):
             self.syncTimer = time.time()
             self.set_sensor_enable(connectedSensorChan)
@@ -158,7 +158,7 @@ class ClassCapRead:
                     finger.snsCmd.setSensorSync(0)
                     break
 
-        # VOFA调试输出
+        #VOFA调试输出
         self.debugPrint()
 
     
@@ -167,24 +167,24 @@ class ClassCapRead:
         """发布单个手指数据到ROS 2话题"""
         finger = self.fingers[finger_index]
         
-        # 创建WrenchStamped消息（用于力数据）
+        #创建WrenchStamped消息（用于力数据）
         wrench_msg = WrenchStamped()
         wrench_msg.header = Header()
         wrench_msg.header.stamp = self.node.get_clock().now().to_msg()
         wrench_msg.header.frame_id = f"finger_{finger_index}"
         
-        # 如果有法向力和切向力数据，填充到wrench消息
+        #如果有法向力和切向力数据，填充到wrench消息
         if finger.readData.nf and len(finger.readData.nf) > 0:
             wrench_msg.wrench.force.z = float(finger.readData.nf[0])  # 法向力
             
         if finger.readData.tf and len(finger.readData.tf) > 0:
             wrench_msg.wrench.force.x = float(finger.readData.tf[0])  # 切向力
-            # 可以根据tfDir决定方向分量
+            #可以根据tfDir决定方向分量
             
-        # 发布力数据
+        #发布力数据
         self.node.wrench_publishers[finger_index].publish(wrench_msg)
         
-        # 创建自定义JSON消息包含所有数据
+        #创建自定义JSON消息包含所有数据
         sensor_data = {
             'sensor_index': finger_index,
             'timestamp': time.time(),
@@ -196,7 +196,7 @@ class ClassCapRead:
             'mutual_prox_cap': finger.readData.mProxCapData
         }
         
-        # 发布JSON数据
+        #发布JSON数据
         from std_msgs.msg import String
         json_msg = String()
         json_msg.data = json.dumps(sensor_data)
@@ -229,7 +229,7 @@ class TactileSensorNode(Node):
     def __init__(self):
         super().__init__('tactile_sensor_node')
         
-        # ROS 2适配：参数声明
+        #参数声明
         self.declare_parameters(
             namespace='',
             parameters=[

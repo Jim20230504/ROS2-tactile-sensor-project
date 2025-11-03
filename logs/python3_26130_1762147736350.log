@@ -1,0 +1,114 @@
+[INFO] [1762147736.383032189] [tactile_sensor_node]: Loaded parameters: max_fingers=5, i2c_speed=2, get_cap_ms=15
+[INFO] [1762147736.383478756] [tactile_sensor_node]: Tactile sensor node initialized
+[INFO] [1762147736.398916800] [tactile_sensor_node]: 运行在开发环境中。尝试从脚本目录相对路径加载库: /home/jim/tactile_ws/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2/lib/ch341/CH341PAR_LINUX/lib/x64/dynamic/libch347.so
+[INFO] [1762147736.399467541] [tactile_sensor_node]: ch341加载成功
+[INFO] [1762147736.399786169] [tactile_sensor_node]: CH341 library initialized
+[INFO] [1762147736.414174686] [tactile_sensor_node]: CH341 device opened successfully on Linux
+[INFO] [1762147736.414817119] [tactile_sensor_node]: CH341 device opened
+[INFO] [1762147736.429295560] [tactile_sensor_node]: CH341 I2C speed set to 2
+[INFO] [1762147737.451878104] [tactile_sensor_node]: CH341 fully initialized and ready
+[INFO] [1762147737.511725365] [tactile_sensor_node]: project=17
+[INFO] [1762147737.512424795] [tactile_sensor_node]: finger connected, project = 两指-大包
+[INFO] [1762147737.512969415] [tactile_sensor_node]: Sensor[0] connected
+[ERROR] [1762147737.537291507] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147737.549375455] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147737.561619906] [tactile_sensor_node]: project=0
+[ERROR] [1762147737.561881928] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147737.562097020] [tactile_sensor_node]: Sensor[1] connected
+[ERROR] [1762147737.586191123] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147737.598506360] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147737.611139177] [tactile_sensor_node]: project=0
+[ERROR] [1762147737.611734163] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147737.612259720] [tactile_sensor_node]: Sensor[2] connected
+[ERROR] [1762147737.636408023] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147737.648449711] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147737.660703147] [tactile_sensor_node]: project=0
+[ERROR] [1762147737.660956113] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147737.661166015] [tactile_sensor_node]: Sensor[3] connected
+[ERROR] [1762147737.685685511] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147737.698415830] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147737.711404699] [tactile_sensor_node]: project=0
+[ERROR] [1762147737.712044805] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147737.712644984] [tactile_sensor_node]: Sensor[4] connected
+[ERROR] [1762147739.678638874] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147739.691379233] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147739.704235549] [tactile_sensor_node]: project=0
+[ERROR] [1762147739.704976422] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147739.705590319] [tactile_sensor_node]: Sensor[1] connected
+[ERROR] [1762147739.730443122] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147739.743240740] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147739.756856582] [tactile_sensor_node]: project=0
+[ERROR] [1762147739.758467102] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147739.759516135] [tactile_sensor_node]: Sensor[2] connected
+[ERROR] [1762147739.840810097] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147739.853433364] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147739.866484499] [tactile_sensor_node]: project=0
+[ERROR] [1762147739.867302946] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147739.868000850] [tactile_sensor_node]: Sensor[3] connected
+[ERROR] [1762147739.892990312] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147739.905799476] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147739.918977196] [tactile_sensor_node]: project=0
+[ERROR] [1762147739.919989862] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147739.920935534] [tactile_sensor_node]: Sensor[4] connected
+[ERROR] [1762147741.802830493] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147741.816193242] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147741.829245950] [tactile_sensor_node]: project=0
+[ERROR] [1762147741.830048393] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147741.830796428] [tactile_sensor_node]: Sensor[1] connected
+[ERROR] [1762147741.913519768] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147741.926209889] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147741.939512963] [tactile_sensor_node]: project=0
+[ERROR] [1762147741.940454088] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147741.941189119] [tactile_sensor_node]: Sensor[2] connected
+[ERROR] [1762147742.024429022] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147742.037023370] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147742.050383908] [tactile_sensor_node]: project=0
+[ERROR] [1762147742.051432006] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147742.052179040] [tactile_sensor_node]: Sensor[3] connected
+[ERROR] [1762147742.077312667] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147742.090175424] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147742.103360459] [tactile_sensor_node]: project=0
+[ERROR] [1762147742.104141171] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147742.104759506] [tactile_sensor_node]: Sensor[4] connected
+[ERROR] [1762147743.960904403] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147743.973713796] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147743.986925072] [tactile_sensor_node]: project=0
+[ERROR] [1762147743.988164806] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147743.989121205] [tactile_sensor_node]: Sensor[1] connected
+[ERROR] [1762147744.072803356] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147744.085389498] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147744.099182839] [tactile_sensor_node]: project=0
+[ERROR] [1762147744.100813128] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147744.102070039] [tactile_sensor_node]: Sensor[2] connected
+[ERROR] [1762147744.185893535] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147744.198502325] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147744.211427123] [tactile_sensor_node]: project=0
+[ERROR] [1762147744.211932263] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147744.212367327] [tactile_sensor_node]: Sensor[3] connected
+[ERROR] [1762147744.236629963] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147744.248751214] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147744.261050637] [tactile_sensor_node]: project=0
+[ERROR] [1762147744.261442317] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147744.261764153] [tactile_sensor_node]: Sensor[4] connected
+[ERROR] [1762147746.080897034] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147746.093931814] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147746.106982176] [tactile_sensor_node]: project=0
+[ERROR] [1762147746.107801862] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147746.108596066] [tactile_sensor_node]: Sensor[1] connected
+[ERROR] [1762147746.190411946] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147746.203004885] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147746.216119077] [tactile_sensor_node]: project=0
+[ERROR] [1762147746.217070825] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147746.217800306] [tactile_sensor_node]: Sensor[2] connected
+[ERROR] [1762147746.300673537] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147746.313664122] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147746.326979577] [tactile_sensor_node]: project=0
+[ERROR] [1762147746.327851592] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147746.328610424] [tactile_sensor_node]: Sensor[3] connected
+[ERROR] [1762147746.410532793] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762147746.423146729] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762147746.436232733] [tactile_sensor_node]: project=0
+[ERROR] [1762147746.437091909] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762147746.437766031] [tactile_sensor_node]: Sensor[4] connected
+[INFO] [1762147746.502595599] [tactile_sensor_node]: Shutting down tactile sensor node...
+[INFO] [1762147746.503530566] [tactile_sensor_node]: CH341 resources released

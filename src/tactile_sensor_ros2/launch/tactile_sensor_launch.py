@@ -2,9 +2,19 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
+from launch.actions import DeclareLaunchArgument, SetEnvironmentVariable
+import os
 
 def generate_launch_description():
+    
+    log_dir = LaunchConfiguration('log_dir', default=os.path.expanduser('~/tactile_ws/logs'))
+
     return LaunchDescription([
+        DeclareLaunchArgument(
+            'log_dir',
+            default_value=log_dir,
+            description='日志文件存储目录'
+        ),
         DeclareLaunchArgument(
             'max_finger_num',
             default_value='5',
@@ -31,6 +41,15 @@ def generate_launch_description():
             description='Capacitance synchronization interval in milliseconds'
         ),
         
+        SetEnvironmentVariable(
+            name='ROS_LOG_DIR',  # 环境变量名
+            value=log_dir       # 变量值（使用之前声明的参数）
+        ),
+        SetEnvironmentVariable(
+            name='RCUTILS_LOGGING_FILE_APPEND',
+            value='1'
+        ),
+
         Node(
             package='tactile_sensor_ros2',
             executable='cap_read_node',
@@ -42,13 +61,14 @@ def generate_launch_description():
                 'use_vofa_debug': LaunchConfiguration('use_vofa_debug'),
                 'get_cap_ms': LaunchConfiguration('get_cap_ms'),
                 'cap_sync_ms': LaunchConfiguration('cap_sync_ms'),
-            }]
+            }],
+            
         ),
         
         Node(
             package='tactile_sensor_ros2',
             executable='data_subscriber',
             name='tactile_data_subscriber',
-            output='screen'
+            output='screen',
         ),
     ])

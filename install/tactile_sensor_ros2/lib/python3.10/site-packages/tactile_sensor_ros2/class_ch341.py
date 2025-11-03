@@ -59,8 +59,8 @@ class ClassCh341:
                 libPath = os.path.join(bundle_root, 'libch347.so')
                 self.logger.info(f"运行在打包环境中。尝试从 _MEIPASS 加载库: {libPath}")
             else:
-                # 如果运行在标准的 Python 开发环境中
-                # 获取当前脚本文件 (start_project.py) 所在的目录
+                #如果运行在标准的 Python 开发环境中
+                #获取当前脚本文件 (start_project.py) 所在的目录
                 script_dir = os.path.dirname(os.path.abspath(__file__))
  
                 libPath = os.path.join(script_dir, 'lib', 'ch341', 'CH341PAR_LINUX', 'lib', 'x64', 'dynamic', 'libch347.so') 
