@@ -56,8 +56,8 @@ class DataSubscriber(Node):
         def callback(msg):
             self.get_logger().info(
                 f"Finger {finger_index} Wrench - "
-                f"Fz: {msg.wrench.force.z:.3f}, "
-                f"Fx: {msg.wrench.force.x:.3f}"
+                # f"Fz: {msg.wrench.force.z:.3f}, "
+                # f"Fx: {msg.wrench.force.x:.3f}"
             )
         return callback
 
@@ -72,7 +72,9 @@ def main(args=None):
         pass
     finally:
         node.destroy_node()
-        rclpy.shutdown()
+        if rclpy.ok():
+            rclpy.shutdown()
+        
 
 
 if __name__ == '__main__':

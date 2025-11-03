@@ -1,0 +1,35 @@
+[INFO] [1762153252.315108872] [tactile_sensor_node]: Loaded parameters: max_fingers=5, i2c_speed=2, get_cap_ms=15
+[INFO] [1762153252.315465452] [tactile_sensor_node]: Tactile sensor node initialized
+[INFO] [1762153252.331086426] [tactile_sensor_node]: 运行在开发环境中。尝试从脚本目录相对路径加载库: /home/jim/文档/tactile_wss/install/tactile_sensor_ros2/lib/python3.10/site-packages/tactile_sensor_ros2/lib/ch341/CH341PAR_LINUX/lib/x64/dynamic/libch347.so
+[INFO] [1762153252.331650793] [tactile_sensor_node]: ch341加载成功
+[INFO] [1762153252.331870865] [tactile_sensor_node]: CH341 library initialized
+[INFO] [1762153252.346379251] [tactile_sensor_node]: CH341 device opened successfully on Linux
+[INFO] [1762153252.346690429] [tactile_sensor_node]: CH341 device opened
+[INFO] [1762153252.361133329] [tactile_sensor_node]: CH341 I2C speed set to 2
+[INFO] [1762153253.384894210] [tactile_sensor_node]: CH341 fully initialized and ready
+[INFO] [1762153253.445525935] [tactile_sensor_node]: project=17
+[INFO] [1762153253.446711143] [tactile_sensor_node]: finger connected, project = 两指-大包
+[INFO] [1762153253.447414457] [tactile_sensor_node]: Sensor[0] connected
+[ERROR] [1762153253.472744321] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762153253.486162241] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762153253.499186786] [tactile_sensor_node]: project=0
+[ERROR] [1762153253.500206364] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762153253.500879788] [tactile_sensor_node]: Sensor[1] connected
+[ERROR] [1762153253.525550538] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762153253.538778729] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762153253.552070975] [tactile_sensor_node]: project=0
+[ERROR] [1762153253.553102283] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762153253.553885743] [tactile_sensor_node]: Sensor[2] connected
+[ERROR] [1762153253.578705903] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762153253.591165208] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762153253.604319131] [tactile_sensor_node]: project=0
+[ERROR] [1762153253.605325994] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762153253.606216103] [tactile_sensor_node]: Sensor[3] connected
+[ERROR] [1762153253.630863238] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762153253.643533692] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762153253.656248660] [tactile_sensor_node]: project=0
+[ERROR] [1762153253.656791848] [tactile_sensor_node]: not found vailed project, project para use default
+[INFO] [1762153253.657325530] [tactile_sensor_node]: Sensor[4] connected
+[ERROR] [1762153255.602930145] [tactile_sensor_node]: setSensorSendType error, addr = 0
+[ERROR] [1762153255.615150339] [tactile_sensor_node]: setSensorCapOffset error, addr = 0
+[INFO] [1762153255.627842994] [tactile_sensor_node]: CH341 resources released

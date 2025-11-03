@@ -1,0 +1,433 @@
+[INFO] [1762150567.562236318] [tactile_data_subscriber]: Tactile data subscriber initialized
+[INFO] [1762150568.915365903] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150568.917018437] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150568.973770592] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150568.975352763] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150569.031316325] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150569.032448667] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150569.088834001] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150569.090078798] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150569.150637672] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150569.151956263] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150569.213180911] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150569.214478326] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150569.275435319] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150569.276378525] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150569.332889669] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150569.333822117] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150569.396019177] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150569.397201991] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150569.459106529] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150569.460555003] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150569.521636089] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150569.523393839] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150569.579324277] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150569.580513706] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150569.640990911] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150569.641989785] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150569.703583154] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150569.704603907] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150569.765586185] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150569.766484483] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150569.827589460] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150569.828687581] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150569.889713140] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150569.891027093] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150569.951541549] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150569.952872930] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150570.013969021] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150570.015266981] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150570.071572133] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150570.072580408] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150570.184669956] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150570.185518841] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150570.242422731] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150570.243523704] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150570.297916366] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150570.298703894] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150570.356845952] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150570.358622536] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150570.413281812] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150570.414332845] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150570.476060465] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150570.477111174] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150570.536246048] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150570.538953518] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150570.598492250] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150570.600042792] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150570.660744256] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150570.662281198] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150570.718837327] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150570.720565456] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150570.780682141] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150570.782267718] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150570.841852016] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150570.843180637] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150570.979253648] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150570.980423197] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150571.118244080] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150571.120557616] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150571.182808040] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150571.184027222] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150571.244751432] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150571.246102565] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150571.306797812] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150571.307697501] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150571.366002611] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150571.367754715] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150571.429887181] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150571.431349248] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150571.492243892] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150571.493766886] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150571.549841663] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150571.551510753] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150571.612945527] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150571.613896865] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150571.675253623] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150571.676401823] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150571.736881525] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150571.737810984] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150571.798610073] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150571.799959757] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150571.860515148] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150571.861613117] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150571.922815095] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150571.924014435] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150571.980028545] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150571.981287240] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150572.092200128] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150572.093739861] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150572.149167458] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150572.150709252] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150572.205489884] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150572.206668073] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150572.264280649] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150572.265771765] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150572.320017470] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150572.320774103] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150572.381748389] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150572.382693459] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150572.444833113] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150572.446434056] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150572.506983680] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150572.508512573] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150572.568788403] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150572.570499040] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150572.627123471] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150572.628532981] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150572.690461794] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150572.691731307] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150572.753839050] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150572.755588714] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150572.811135963] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150572.812305420] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150572.873555127] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150572.874668130] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150572.935451263] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150572.937221741] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150572.997153372] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150572.998180538] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150573.135696588] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150573.137590634] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150573.272954005] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150573.274692287] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150573.336014614] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150573.337720562] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150573.397711634] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150573.398961467] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150573.459835734] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150573.461063230] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150573.522103520] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150573.523068009] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150573.584647020] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]
+[INFO] [1762150573.585752909] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150573.642416982] [tactile_data_subscriber]: Finger 0 Wrench - Fz: 0.000, Fx: 0.000
+[INFO] [1762150573.644114188] [tactile_data_subscriber]: Finger 0
+NF: [0.0, 0.0]
+TF: [0.0, 0.0]
+Channels: 16
+ tDir:[65535, 65535]

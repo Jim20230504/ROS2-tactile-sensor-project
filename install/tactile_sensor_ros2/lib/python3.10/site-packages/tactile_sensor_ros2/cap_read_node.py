@@ -80,7 +80,6 @@ class ClassCapRead:
         if hasattr(self, 'ch341'):
             self.ch341.disconnect()
         self.exitFlg = True
-        self.logger.info("CH341 resources released")
 
     def set_sensor_enable(self, idx):
         _pack = [idx]
@@ -279,7 +278,6 @@ class TactileSensorNode(Node):
 
     def destroy_node(self):
         """节点销毁时的清理工作"""
-        self.get_logger().info("Shutting down tactile sensor node...")
         if hasattr(self, 'cap_reader'):
             try:
                 self.cap_reader.deinit()
@@ -301,7 +299,10 @@ def main(args=None):
     finally:
         if 'node' in locals():
             node.destroy_node()
-        rclpy.shutdown()
+        if rclpy.ok():
+            node.get_logger().info("Shutting down tactile sensor node...")
+            node.get_logger().info("CH341 resources released")
+            rclpy.shutdown()
 
 
 if __name__ == '__main__':

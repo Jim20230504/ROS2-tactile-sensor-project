@@ -43,7 +43,7 @@ def generate_launch_description():
         
         SetEnvironmentVariable(
             name='ROS_LOG_DIR',  # 环境变量名
-            value=log_dir       # 变量值（使用之前声明的参数）
+            value=log_dir       # 变量值
         ),
         SetEnvironmentVariable(
             name='RCUTILS_LOGGING_FILE_APPEND',
