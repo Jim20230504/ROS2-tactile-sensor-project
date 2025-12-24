@@ -1,0 +1,13 @@
+# 忽略日志文件夹
+logs/
+log/
+install/
+build/
+
+
+# 忽略Python缓存文件
+__pycache__/
+*.pyc
+
+# 忽略IDE配置（如VS Code）
+.vscode/

@@ -240,7 +240,7 @@ class TactileSensorNode(Node):
             ]
         )
         
-        # ROS 2适配：QoS配置
+        # QoS配置
         qos_profile = QoSProfile(
             reliability=ReliabilityPolicy.RELIABLE,
             durability=DurabilityPolicy.VOLATILE,

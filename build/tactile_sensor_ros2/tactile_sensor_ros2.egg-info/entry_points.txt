@@ -1,4 +1,0 @@
-[console_scripts]
-cap_read_node = tactile_sensor_ros2.cap_read_node:main
-data_subscriber = tactile_sensor_ros2.data_subscriber_node:main
-
